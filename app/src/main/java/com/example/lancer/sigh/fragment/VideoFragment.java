@@ -1,30 +1,40 @@
 package com.example.lancer.sigh.fragment;
 
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.lancer.sigh.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class VideoFragment extends Fragment {
-
-
-    public VideoFragment() {
-        // Required empty public constructor
-    }
-
+public class VideoFragment extends BaseFragment {
+    private android.support.v7.widget.Toolbar toolbarVideo;
+    private com.scwang.smartrefresh.layout.SmartRefreshLayout refreshVideo;
+    private android.support.v7.widget.RecyclerView recyVideo;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_video, container, false);
+    protected int setLayoutId() {
+        return R.layout.fragment_video;
     }
 
+    @Override
+    public void initView(View view) {
+        toolbarVideo = view.findViewById(R.id.toolbar_video);
+        refreshVideo = view.findViewById(R.id.refresh_video);
+        recyVideo = view.findViewById(R.id.recy_video);
+    }
+
+    @Override
+    public void initData() {
+        toolbarVideo.setTitle("视频");
+        DrawerLayout drawer = getActivity().findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), drawer, toolbarVideo, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+    }
+
+    @Override
+    public void initListener() {
+    }
 }

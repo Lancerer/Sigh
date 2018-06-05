@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-        setSupportActionBar(toolbar);
+   /*     setSupportActionBar(toolbar);*/
         initData();
 
     }
@@ -89,13 +89,13 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             getSupportFragmentManager().beginTransaction().replace(R.id.pool, new NewFragment()).commit();
-            toolbar.setTitle("新闻");
+        /*    toolbar.setTitle("新闻");*/
         } else if (id == R.id.nav_gallery) {
             getSupportFragmentManager().beginTransaction().replace(R.id.pool, new VideoFragment()).commit();
-            toolbar.setTitle("视频");
+            /*toolbar.setTitle("视频");*/
         } else if (id == R.id.nav_slideshow) {
             getSupportFragmentManager().beginTransaction().replace(R.id.pool, new PicFragment()).commit();
-            toolbar.setTitle("美图");
+          /*  toolbar.setTitle("美图");*/
         } else if (id == R.id.nav_manage) {
             getSharedPreferences("config", MODE_PRIVATE).edit().putBoolean("auto", false).commit();
             startActivity(new Intent(this, LoginActivity.class));
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity
         return super.onKeyDown(keyCode, event);
     }
     private void initView() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+      /*  toolbar = (Toolbar) findViewById(R.id.toolbar);*/
         fab = (FloatingActionButton) findViewById(R.id.fab);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);

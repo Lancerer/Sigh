@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.lancer.sigh.MainActivity">
-
+<!--
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#59b7c3" />
-
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:background="#59b7c3" />-->
+<!--     android:layout_below="@+id/toolbar"-->
     <FrameLayout
         android:id="@+id/pool"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar" />
+    />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

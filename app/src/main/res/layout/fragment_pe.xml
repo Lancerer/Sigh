@@ -1,0 +1,12 @@
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_city"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lancer.sigh.fragment.news.HappyFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

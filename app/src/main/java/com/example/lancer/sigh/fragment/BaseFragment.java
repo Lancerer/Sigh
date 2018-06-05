@@ -28,14 +28,15 @@ public abstract class BaseFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(setLayoutId(), container, false);
         initView(view);
+        initData();
+        initListener();
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initData();
-        initListener();
+
     }
 
     protected abstract int setLayoutId();
